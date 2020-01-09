@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     android:background="#ff3344">
 
-    <TextView
+    <com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView
+        android:id="@+id/pmr_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="我是第二个页面"
-        android:textSize="30dp"
-        android:textColor="#ffffff"
-        android:gravity="center"/>
+        android:background="#ffffff">
+
+    </com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView>
 
 </LinearLayout>

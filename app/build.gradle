@@ -35,5 +35,7 @@ dependencies {
 
     //okgo网络请求框架必须使用
     compile 'com.lzy.net:okgo:3.0.4'
+    //上拉下拉框架
+    compile 'com.wuxiaolong.pullloadmorerecyclerview:library:1.1.2'
 
 }

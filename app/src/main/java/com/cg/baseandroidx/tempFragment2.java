@@ -4,10 +4,20 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.cg.baseandroidx.Adapters.tempPmrAdapter;
+import com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 public class tempFragment2 extends BaseFragment {
+
+    private PullLoadMoreRecyclerView pmr_list;
+    private List<String> list_data;
+    private tempPmrAdapter pAdapter;
 
     public static tempFragment2 newInstance() {
 
@@ -19,7 +29,15 @@ public class tempFragment2 extends BaseFragment {
 
     @Override
     public void onFragmentLoad() {
-        Log.e("tempFragment2", "行数: 13  第二个页面加载数据");
+        if(list_data.size() == 0)
+        {
+            for(int i=0;i<25;i++)
+            {
+                list_data.add("这是第 " + (i +1 ) + " 条数据");
+            }
+
+            pAdapter.notifyDataSetChanged();
+        }
     }
 
     @Override
@@ -29,7 +47,13 @@ public class tempFragment2 extends BaseFragment {
 
     @Override
     protected void initView(View rootView) {
-
+        pmr_list = (PullLoadMoreRecyclerView)rootView.findViewById(R.id.pmr_list);
+        pmr_list.setLinearLayout();
+        pmr_list.setPullRefreshEnable(false);
+        pmr_list.setPushRefreshEnable(false);
+        list_data = new ArrayList<>();
+        pAdapter = new tempPmrAdapter(getActivity(),list_data);
+        pmr_list.setAdapter(pAdapter);
     }
 
     @Override
