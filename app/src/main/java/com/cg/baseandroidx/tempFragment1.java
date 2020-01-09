@@ -35,7 +35,6 @@ public class tempFragment1 extends BaseFragment {
                         @Override
                         public void onSuccess(Response<String> response) {
                             //注意这里已经是在主线程了
-                            Log.e("tempFragment1", "行数: 36  请求数据了吗");
                             String data = response.body();//这个就是返回来的结果
                             try {
                                 txt_fragment1.setText(data);
@@ -57,7 +56,7 @@ public class tempFragment1 extends BaseFragment {
 
     @Override
     public void onFragmentLoadStop() {
-        Log.e("tempFragment1", "行数: 19  第一个页面数据停止加载");
+
     }
 
     @Override
@@ -74,6 +73,6 @@ public class tempFragment1 extends BaseFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Log.e("tempFragment1.java(onViewCreated)", "行数: 26  我是第一个，开始加载数据");
+        
     }
 }
