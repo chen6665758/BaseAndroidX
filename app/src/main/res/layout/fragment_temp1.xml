@@ -5,6 +5,7 @@
     android:background="@color/colorPrimary">
 
     <TextView
+        android:id="@+id/txt_fragment1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="我是第一个页面"

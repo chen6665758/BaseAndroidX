@@ -16,12 +16,12 @@ public class tempFragment3 extends BaseFragment {
 
     @Override
     public void onFragmentLoad() {
-        Log.e("tempFragment3.java(onFragmentLoad)", "行数: 9  第三个页面加载");
+        Log.e("tempFragment3", "行数: 9  第三个页面加载");
     }
 
     @Override
     public void onFragmentLoadStop() {
-        Log.e("tempFragment3.java(onFragmentLoadStop)", "行数: 14  第三个页面加载完");
+        Log.e("tempFragment3", "行数: 14  第三个页面加载完");
     }
 
     @Override

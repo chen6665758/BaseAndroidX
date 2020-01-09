@@ -1,13 +1,21 @@
 package com.cg.baseandroidx;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
+
+import com.lzy.okgo.OkGo;
+import com.lzy.okgo.callback.StringCallback;
+import com.lzy.okgo.model.Response;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public class tempFragment1 extends BaseFragment {
 
+
+    private TextView txt_fragment1;
 
     public static tempFragment1 newInstance() {
 
@@ -19,17 +27,42 @@ public class tempFragment1 extends BaseFragment {
 
     @Override
     public void onFragmentLoad() {
-        Log.e("tempFragment1.java(onFragmentLoad)", "行数: 14  第一个页面数据加载");
+
+        if(!txt_fragment1.getText().toString().contains("百度")) {
+            OkGo.<String>get("http://www.baidu.com")
+                    .tag(this)//
+                    .execute(new StringCallback() {
+                        @Override
+                        public void onSuccess(Response<String> response) {
+                            //注意这里已经是在主线程了
+                            Log.e("tempFragment1", "行数: 36  请求数据了吗");
+                            String data = response.body();//这个就是返回来的结果
+                            try {
+                                txt_fragment1.setText(data);
+                            } catch (Exception ex) {
+                                Log.e("ClockIn", "行数: 171  ex:" + ex.getMessage());
+
+
+                            }
+                        }
+
+                        @Override
+                        public void onError(Response<String> response) {
+                            super.onError(response);
+                            Log.e("ClockIn", "行数: 180  error:" + response.body());
+                        }
+                    });
+        }
     }
 
     @Override
     public void onFragmentLoadStop() {
-        Log.e("tempFragment1.java(onFragmentLoadStop)", "行数: 19  第一个页面数据停止加载");
+        Log.e("tempFragment1", "行数: 19  第一个页面数据停止加载");
     }
 
     @Override
     protected void initView(View rootView) {
-
+        txt_fragment1 = (TextView)rootView.findViewById(R.id.txt_fragment1);
     }
 
     @Override

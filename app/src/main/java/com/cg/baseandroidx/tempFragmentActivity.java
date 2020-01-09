@@ -1,14 +1,15 @@
 package com.cg.baseandroidx;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 
 import com.cg.baseandroidx.Adapters.tempVpAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 public class tempFragmentActivity extends BaseActivity {
 

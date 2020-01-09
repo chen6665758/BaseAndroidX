@@ -4,13 +4,14 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.cg.baseandroidx.customs.MyLoading;
 import com.cg.baseandroidx.untils.ConnectionDetector;
 import com.cg.baseandroidx.untils.StatusBarUtils;
 import com.cg.baseandroidx.untils.myApplication;
 import com.google.gson.Gson;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
 /*                       _oo0oo_

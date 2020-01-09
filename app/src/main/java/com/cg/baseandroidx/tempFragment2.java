@@ -1,10 +1,11 @@
 package com.cg.baseandroidx;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public class tempFragment2 extends BaseFragment {
 
@@ -18,12 +19,12 @@ public class tempFragment2 extends BaseFragment {
 
     @Override
     public void onFragmentLoad() {
-        Log.e("tempFragment2.java(onFragmentLoad)", "行数: 13  第二个页面加载数据");
+        Log.e("tempFragment2", "行数: 13  第二个页面加载数据");
     }
 
     @Override
     public void onFragmentLoadStop() {
-        Log.e("tempFragment2.java(onFragmentLoadStop)", "行数: 18  第二个页面停止加载数据");
+        Log.e("tempFragment2", "行数: 18  第二个页面停止加载数据");
     }
 
     @Override
