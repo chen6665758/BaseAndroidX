@@ -40,7 +40,11 @@ dependencies {
     //glide图片加载
     implementation 'com.github.bumptech.glide:glide:4.5.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.5.0'
-
+    //权限判断
     implementation 'pub.devrel:easypermissions:3.0.0'
+    //时间选择器
+    compile 'com.contrarywind:Android-PickerView:4.1.9'
+    //banner
+    implementation 'com.github.zhpanvip:BannerViewPager:2.6.5'
 
 }
