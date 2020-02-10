@@ -37,7 +37,8 @@
             android:name="design_height_in_dp"
             android:value="640" />
 
-        <activity android:name=".tempFragmentActivity"></activity>
+        <activity android:name=".tempFragmentActivity" />
+        <activity android:name=".tempTransitioActivity"></activity>
     </application>
 
 </manifest>

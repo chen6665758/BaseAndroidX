@@ -31,9 +31,11 @@
                 android:drawableTop="@mipmap/ic_launcher"
                 android:gravity="center_horizontal"/>
             <TextView
+                android:id="@+id/btn_Transitio"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="转场动画"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"

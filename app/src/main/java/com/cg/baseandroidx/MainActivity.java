@@ -36,6 +36,7 @@ public class MainActivity extends BaseActivity implements EasyPermissions.Permis
     private List<String> perms;
 
     private TextView btn_tempFragment;
+    private TextView btn_Transitio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +76,14 @@ public class MainActivity extends BaseActivity implements EasyPermissions.Permis
                 }else{
                     hasPermissions();
                 }
+            }
+        });
+
+        btn_Transitio = (TextView)findViewById(R.id.btn_Transitio);
+        btn_Transitio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Jump_intent(tempTransitioActivity.class,null);
             }
         });
     }
